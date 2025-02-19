@@ -26,14 +26,13 @@
 
 .site-title-container{
     margin-left: 50px;
-
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
 .header{
-    background-color: wheat;
+    background-color: #B53471;
     box-shadow: 0px 20px 40px 2px #B53471;
     padding: 20px 100px;
     display: flex;
@@ -45,7 +44,6 @@
     width: 100%;
     z-index: 9999;
     height: 60px;
-
 }
 
 .menu{
@@ -140,8 +138,8 @@
 .resume-btn,
 .contact-btn{
     font-family: "Nerko One", serif;
-    font-size: 18px;
-    padding: 15px 30px;
+    font-size: 20px;
+    padding: 10px 30px;
     cursor: pointer;
 }
 
@@ -149,7 +147,6 @@
     background-color: deeppink;
     color: lightpink;
 }
-
 
 .contact-btn{
     background-color: lightpink;
@@ -163,8 +160,102 @@
     opacity: 0.4;
 }
 
+
+/*RESUME MODAL*/
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.modal-content {
+    position: relative; /* This ensures the close button is positioned inside */
+    background: white;
+    padding: 15px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 70vh; 
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content h2 {
+    font-family: "Montserrat", serif;
+    font-size: 20px;
+    color: #2f3542;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 7px;
+    right: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black; 
+    cursor: pointer;
+    background: white; 
+    border: 2px solid #ccc; /* Adds visibility */
+    border-radius: 20%;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Ensures it's above modal content */ 
+}
+
+.close-btn:hover {
+    background: #6F1E51;
+    color: white;
+    transition: 0.3s;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+    border-radius: 5px;
+    padding-right: 10px;
+    box-sizing: content-box;
+}
+
+.resume-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.resume-grid::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.resume-image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+
+/*ABOUT ME SECTION*/
 .about-section {
     font-family: "Madimi One", serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     margin-top: 81px;
     background-image: url('cy_bg.jpg'); 
     background-color: rgba(66, 62, 62, 0.8);    
@@ -177,7 +268,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 92vh;
     text-align: center;
 }
 
@@ -195,6 +286,8 @@
 }
 
 .subtitle {
+    font-family: "Madimi One", serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     font-size: 18px;
     margin-top: -10px;
     color: #bbb;
@@ -248,6 +341,79 @@ html {
 }
 
 
+/*PROJECT TAB*/
+.projects-section {
+    padding: 3px;
+    margin-top: 0px;
+    min-height: 90vh;
+    background-image: url('proj_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 70px;
+}
+
+.section-title {
+    font-family: "Titan One", serif;
+    font-weight: 120;
+    font-size: 36px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.highlight {
+    color:#ff1493;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-family: "Madimi One", serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    height: 420px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    font-family: "Righteous", serif;
+    font-weight: 200;
+    color: #2f3542;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.project-card p {
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #747d8c;
+}
 
 
 
