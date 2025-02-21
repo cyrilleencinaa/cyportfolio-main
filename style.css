@@ -25,7 +25,7 @@
 }
 
 .site-title-container{
-    margin-left: 50px;
+    margin-left: 30px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -33,7 +33,7 @@
 
 .header{
     background-color: #B53471;
-    box-shadow: 0px 20px 40px 2px #B53471;
+    box-shadow: 0px 20px 40px 2px #721742;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
@@ -77,7 +77,7 @@
 }
 
 .menu a:hover {
-    color: #ff1493;
+    color: #f8a5c2;
 }
 
 .hero-btn-container .resume-btn:hover{
@@ -345,7 +345,7 @@ html {
 .projects-section {
     padding: 3px;
     margin-top: 0px;
-    min-height: 90vh;
+    min-height: 91vh;
     background-image: url('proj_bg.png');
     background-size: cover;
     background-position: center;
@@ -415,7 +415,115 @@ html {
     color: #747d8c;
 }
 
+/*CONTACT SECTION*/
+.contact-section {
+    text-align: center;
+    padding: 3px;
+    margin-top: 0px;
+    min-height: 90vh;
+    background-image: url('contact_bg.png');
+    background-size: cover;
+    background-position: center;
+}
 
+/* Contact Container */
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contact-container h2 {
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    color: #fff;
+
+}
+
+.contact-container p {
+    font-family: "Madimi One", serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Contact Boxes */
+.contact-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-box {
+    margin-top: 40px;
+    background: #83235f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-box h3 {
+    color: #f8a5c2;
+    font-family: "Anek Gurmukhi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    color: #bbb;
+    font-family: "Anek Gurmukhi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 15px;
+}
+
+/* Social Media Buttons */
+.social-btn {
+    color: #bbb;
+    font-family: "Anek Gurmukhi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 15px;
+    display: block;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 8px auto;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 80%;
+    transition: 0.3s;
+}
+
+.social-btn i {
+    margin-right: 10px;
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.instagram {
+    background: #E1306C;
+}
+
+.email {
+    background: #6c757d;
+}
+
+.social-btn:hover {
+    opacity: 0.3;
+}
 
 
 

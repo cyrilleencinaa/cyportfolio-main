@@ -6,7 +6,7 @@
     <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mouse+Memoirs&family=Nerko+One&family=Righteous&family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Gurmukhi:wght@100..800&family=Jersey+10&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mouse+Memoirs&family=Nerko+One&family=Righteous&family=Titan+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -56,7 +56,7 @@
             <p class="hero-sub-heading">Get to Know the Mind Behind the Work!</p>
             <div class="hero-btn-container">
                 <button class="resume-btn">Resume</button>
-                <button class="contact-btn">Contact</button>
+                <button id="contactBtn" class="contact-btn">Contact</button>
             </div>
             <p class="small-text">Innovative. Creative. Passionate. Discover My Work.</p>
         </div>
@@ -97,6 +97,10 @@
                 }
             });
         });
+
+        document.getElementById("contactBtn").addEventListener("click", function() {
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        });    
     </script>
 
     <!-- About Me -->
@@ -144,10 +148,41 @@
     </section>
 
 
-    <!-- My Contact -->
+    <!-- Contact -->
     <section class="contact-section" id="contact">
-        <div>
+        <div class="contact-container">
+            <h2>GET IN TOUCH</h2>
+            <p>Let's build something great together !</p>
             
+            <div class="contact-content">
+                <!-- Contact Box 1 -->
+                 <div class="contact-box">
+                    <h3>CALL ME</h3>
+                    <p>(+63) 9997225138</p>
+                    <p>7213-59-20</p><br>
+                    <h3>LOCATION</h3>
+                    <p>25 Cornelia Street Biringan Avenue, NYC.</p>
+                 </div>
+                <!-- Contact Box 2 -->
+                <div class="contact-box">
+                    <h3>BUSINESS HOURS</h3>
+                    <p>Mon-Fri: 10AM - 8PM</p>
+                    <p>Sat-Sun: Day Off</p>
+                </div>
+                <!-- Contact Box 3 -->
+                <div class="contact-box">
+                    <h3>SOCIAL MEDIA</h3>
+                    <a href="https://www.facebook.com/cyrillencina/" target="_blank" class="social-btn facebook">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/cyrillencinaa_/" target="_blank" class="social-btn instagram">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="mailto:cyrilleencina25@gmail.com" class="social-btn email">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
