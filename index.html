@@ -6,8 +6,7 @@
     <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Madimi+One&family=Mouse+Memoirs&family=Nerko+One&family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Gurmukhi:wght@100..800&family=Freckle+Face&family=Jersey+10&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mouse+Memoirs&family=Nerko+One&family=Righteous&family=Rubik+Doodle+Shadow&family=Titan+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,14 +18,12 @@
     }
 
     body {
-        background-image: url('beige_bg.png');
+        background-image: url('beige2_bg.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 100vh;
+        height: 750px;
         margin: 0;
-
-
     }
 </style>
 
@@ -38,14 +35,16 @@
             <img class="logo" src="my_logo2.png" alt="">
             <p class="site-title">Serilscape.</p>
          </div>
+
         <div class="menu">
             <a class="homelink" href="#home">Home</a>
             <a class="aboutlink" href="#about">About</a>
             <a class="projectlink" href="#projects">Projects</a>
             <a class="contactlink" href="#contact">Contact</a>
-            <a class="hire-me">Hire Me</a>
+            <a class="hire-me" href="#hire">Hire Me</a>
         </div>
     </div>
+
 
     <!-- Hero -->
     <div class="hero-container" id="home">
@@ -58,51 +57,154 @@
             <h1 class="hero-heading">My Personal Portfolio</h1>
             <p class="hero-sub-heading">Get to Know the Mind Behind the Work!</p>
             <div class="hero-btn-container">
-                <button class="resume-btn">Resume</button>
-                <button class="contact-btn">Contact</button>
+                <button class="resume-btn1">Resume</button>
+                <button id="contactBtn" class="contact-btn">Contact</button>
             </div>
             <p class="small-text">Innovative. Creative. Passionate. Discover My Work.</p>
         </div>
     </div>
 
+
+    <!-- RESUME MODAL -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>My Resume</h2>
+            <div class="resume-grid">
+                <img src="C:\Users\mscyr\OneDrive\Desktop\cyportfolio-main\seril_resume.jpg" alt="Resume" class="resume-image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const resumeBtns = document.querySelectorAll(".resume-btn1, .resume-btn2");
+        const modal = document.getElementById("resumeModal");
+        const closeModal = document.querySelector(".close-btn");
+
+        // Show modal when either Resume button is clicked
+        resumeBtns.forEach(button => {
+            button.addEventListener("click", function() {
+                modal.style.display = "flex";
+            });
+        });
+
+        // Hide modal when close button is clicked
+        closeModal.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        // Hide modal when clicking outside content box
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+
+    document.getElementById("contactBtn").addEventListener("click", function() {
+        document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    });
+
+</script>
+
+
     <!-- About Me -->
     <section class="about-section" id="about">
         <div class="content-container">
             <h1 class="title">About <span class="highlight">ME</span></h1>
-            <p class="subtitle">IT Student and Lotso Enthusiast</p>
+            <p class="subtitle">Front-End Web Developer and IT Professional</p>
 
             <div class="info-container">
                 <img src="cyrilleee.png" alt="Cyrille" class="profile-image">
                 
                 <div class="info-text">
-                    <h2 class="heading">WHO IS SERIL?</h2>
-                    <p>Hi, I'm Cyrille M. Encina, a 3rd-year BSIT student and passionate about Front-End Web Development. My goal is to turn ideas into functional, scalable, and visually appealing web solutions through innovative and effective ideas. Explore my work and let’s connect!</p>
-
-                    <button class="cta-button">GET STARTED NOW</button>
+                    <h2 class="heading">WHO IS SERILA?</h2>
+                    <p>Hi, I'm Cyrille M. Encina, an IT professional and passionate about Front-End Web Development. My goal is to turn ideas into functional, scalable, and visually appealing web solutions through innovative and effective ideas. Explore my work and let’s connect!</p>
                 </div>
             </div>
         </div>    
     </section>
 
+
     <!-- My Projects -->
     <section class="projects-section" id="projects">
-        <div>
-            
+        <div class="projects-container">
+            <h1 class="section-title">My <span class="highlight"> Projects</span></h1>
+            <p class="section-subtitle">A showcase of my previous works and school projects.</p>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="proj1.png" alt="project 1">
+                <h3>First Portfolio</h3><br>
+                <p>I made this during our first year, and all the navigation tabs are functional. Each tab consists of information about me.</p>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="proj2.png" alt="project 2">
+                <h3>Billing Form</h3><br>
+                <p>This is our past activity in the IT ELEC subject; we were tasked to do a billing form that is connected to XAMPP. The charges will be automatically computed once you click the "Submit Bill" button.</p>
+            </div>
         </div>
-
-
+        </div>
     </section>
 
 
-    <!-- My Contact -->
+    <!-- Contact -->
     <section class="contact-section" id="contact">
-        <div>
+        <div class="contact-container">
+            <h2>GET IN TOUCH</h2>
+            <p>Any questions or inquiries? Just reach out !</p>
             
+            <div class="contact-content">
+                <!-- Contact Box 1 -->
+                 <div class="contact-box">
+                    <h3>CALL ME</h3>
+                    <p>(+63) 9997225138</p>
+                    <p>7213-59-20</p><br>
+                    <h3>LOCATION</h3>
+                    <p>25 Cornelia Street Biringan Avenue, NYC.</p>
+                 </div>
+                <!-- Contact Box 2 -->
+                <div class="contact-box">
+                    <h3>BUSINESS HOURS</h3>
+                    <p>Mon-Fri: 10AM - 8PM</p>
+                    <p>Sat-Sun: Day Off</p>
+                </div>
+                <!-- Contact Box 3 -->
+                <div class="contact-box">
+                    <h3>SOCIAL MEDIA</h3>
+                    <a href="https://www.facebook.com/cyrillencina/" target="_blank" class="social-btn facebook">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/cyrillencinaa_/" target="_blank" class="social-btn instagram">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="mailto:cyrilleencina25@gmail.com" class="social-btn email">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
         </div>
-
-
     </section>
 
+
+    <!-- Hire Me -->
+    <section class="hireme-section" id="hire">
+        <div class="hireme-container">
+            <h2 class="sec-title">Let's Work Together!</h2>
+            <button id="resumeBtn2" class="resume-btn2">See RESUME</button>
+        </div>
+        <img src="flower.png" alt="spinning image" class="spinning-image">
+    </section>
+
+
+
+    <footer>
+        <p>© 2025 My Portfolio. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

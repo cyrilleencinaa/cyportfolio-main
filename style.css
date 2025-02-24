@@ -21,20 +21,19 @@
     font-family: "Madimi One", serif;
     font-weight: bold;
     font-size: 34px;
-    color: #f8a5c2;
+    color: #61004f;
 }
 
 .site-title-container{
-    margin-left: 50px;
-
+    margin-left: 30px;
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
 .header{
-    background-color: #B53471;
-    box-shadow: 0px 20px 40px 2px #B53471;
+    background-color: #ecd7dc;
+    box-shadow: 0px 20px 40px 2px #514749;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
@@ -45,7 +44,6 @@
     width: 100%;
     z-index: 9999;
     height: 60px;
-
 }
 
 .menu{
@@ -72,17 +70,17 @@
 .menu a {
     font-family: "Kanit", serif;
     text-decoration: none;
-    color: black;
+    color: #61004f;
     font-weight: 600;
     font-size: 19px;
     cursor: pointer;
 }
 
 .menu a:hover {
-    color: #ff1493;
+    color: #c68bbb;
 }
 
-.hero-btn-container .resume-btn:hover{
+.hero-btn-container .resume-btn1:hover{
     color: white;
 }
 
@@ -99,13 +97,17 @@
 }
 
 .hero-left{
-    margin-left: 130px;
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-bottom: 40px;
     width: 40%;
     position: relative;
 }
 
 .hero-right{
-    margin-right: 200px;
+    margin-bottom: 80px;
+    margin-right: 230px;
+    margin-left: 0px;
     width: 60%;
 }
 
@@ -120,7 +122,7 @@
 .hero-heading{
     font-family: "Mouse Memoirs", serif;
     font-size: 75px;
-    color: #6F1E51;
+    color: #61004f;
 
 }
 
@@ -137,19 +139,20 @@
     gap: 20px;
 }
 
-.resume-btn,
+.resume-btn1,
 .contact-btn{
-    font-family: "Nerko One", serif;
+    font-family: "Titan One", serif;
     font-size: 18px;
-    padding: 15px 30px;
+    padding: 10px 30px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
 
-.resume-btn{
+.resume-btn1{
     background-color: deeppink;
     color: lightpink;
 }
-
 
 .contact-btn{
     background-color: lightpink;
@@ -163,12 +166,104 @@
     opacity: 0.4;
 }
 
+
+/*RESUME MODAL*/
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.modal-content {
+    position: relative; /* This ensures the close button is positioned inside */
+    background: white;
+    padding: 15px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 70vh; 
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content h2 {
+    font-family: "Montserrat", serif;
+    font-size: 20px;
+    color: #2f3542;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 7px;
+    right: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black; 
+    cursor: pointer;
+    background: white; 
+    border: 2px solid #ccc; /* Adds visibility */
+    border-radius: 20%;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Ensures it's above modal content */ 
+}
+
+.close-btn:hover {
+    background: #6F1E51;
+    color: white;
+    transition: 0.3s;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+    border-radius: 5px;
+    padding-right: 10px;
+    box-sizing: content-box;
+}
+
+.resume-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.resume-grid::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.resume-image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+
+/*ABOUT ME SECTION*/
 .about-section {
     font-family: "Madimi One", serif;
-    margin-top: 81px;
-    background-image: url('cy_bg.jpg'); 
-    background-color: rgba(66, 62, 62, 0.8);    
-    background-blend-mode: multiply;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-top: 5px;
+    background-image: url('aboutme2_bg.png'); 
     padding: 3px;
     color: white;
     background-size: cover; 
@@ -177,7 +272,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 92vh;
     text-align: center;
 }
 
@@ -186,7 +281,7 @@
 }
 
 .title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -195,7 +290,9 @@
 }
 
 .subtitle {
-    font-size: 18px;
+    font-family: "Madimi One", serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    font-size: 21px;
     margin-top: -10px;
     color: #bbb;
 }
@@ -210,14 +307,26 @@
 .profile-image {
     width: 250px;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .info-text {
-    font-family: "Nerko One", serif;
+    font-family: "Anek Gurmukhi", serif;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 300;
     text-align: left;
     max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.info-text p {
+    font-family: "Anek Gurmukhi", serif;
+    font-weight: 200px;
 }
 
 .heading {
@@ -226,31 +335,279 @@
     margin-bottom: 10px;
 }
 
-.cta-button {
-    background-color: #ff00ff;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    margin-top: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #cc00cc;
-}
-
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 60px;
 }
 
 
+/*PROJECT TAB*/
+.projects-section {
+    padding: 3px;
+    margin-top: 0px;
+    min-height: 95vh;
+    background-image: url('proj_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 70px;
+}
+
+.section-title {
+    font-family: "Titan One", serif;
+    font-weight: 120;
+    font-size: 38px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.highlight {
+    color:#ff1493;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    font-family: "Madimi One", serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    height: 300px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    font-family: "Righteous", serif;
+    font-weight: 200;
+    color: #3b414e;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.project-card p {
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #747d8c;
+}
+
+/*CONTACT SECTION*/
+.contact-section {
+    text-align: center;
+    padding: 3px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 100vh;
+    background-image: url('contactsec_bg.png');
+    background-size: cover;
+    background-position: center;
+}
 
 
+/* Contact Container */
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 90px;
+}
+
+.contact-container h2 {
+    font-family: "Jersey 10", serif;
+    font-weight: 200px;
+    font-style: normal;
+    font-size: 88px;
+    color: #ff1493;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.contact-container p {
+    font-family: "Madimi One", serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #2f3542;
+}
+
+/* Contact Boxes */
+.contact-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-box {
+    margin-top: 40px;
+    background: #83235f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-box h3 {
+    color: #f8a5c2;
+    font-family: "Anek Gurmukhi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    color: #bbb;
+    font-family: "Anek Gurmukhi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 15px;
+}
+
+/* Social Media Buttons */
+.social-btn {
+    color: #bbb;
+    font-family: "Anek Gurmukhi", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 15px;
+    display: block;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 8px auto;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 80%;
+    transition: 0.3s;
+}
+
+.social-btn i {
+    margin-right: 10px;
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.instagram {
+    background: #E1306C;
+}
+
+.email {
+    background: #6c757d;
+}
+
+.social-btn:hover {
+    opacity: 0.3;
+}
 
 
+/* Hire Me Container */
+.hireme-section {
+    text-align: center;
+    padding: 3px;
+    margin-top: 0px;
+    min-height: 95vh;
+    background-image: url('hireme_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hireme-container {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinning-image {
+    right: 110px; /* Adjust as needed */
+    top: 50%;
+    width: 160px; /* Adjust size as needed */
+    animation: spin 1s linear infinite; /* Add spinning effect */
+}
 
 
+.spinning-image:hover {
+    animation-play-state: paused;
+}
+
+.hireme-container h2 {
+    margin-top: 200px;
+    font-family: "Rubik Doodle Shadow", serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 80px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.resume-btn2 {
+    font-family: "Titan One", serif;
+    font-weight: 200;
+    background-color: #ff1493;
+    color: white;
+    padding: 12px 24px;
+    margin-top: 80px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.resume-btn2:hover {
+    background-color: #6F1E51;
+}
+
+
+footer {
+    font-family: "Montserrat", serif;
+    text-align: center;
+    padding: 30px;
+    background-color: #d26fa1;
+    color: white;
+    margin-top: 0px;
+}
