@@ -21,7 +21,7 @@
     font-family: "Madimi One", serif;
     font-weight: bold;
     font-size: 34px;
-    color: #f8a5c2;
+    color: #61004f;
 }
 
 .site-title-container{
@@ -32,8 +32,8 @@
 }
 
 .header{
-    background-color: #B53471;
-    box-shadow: 0px 20px 40px 2px #721742;
+    background-color: #ecd7dc;
+    box-shadow: 0px 20px 40px 2px #514749;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
@@ -70,17 +70,17 @@
 .menu a {
     font-family: "Kanit", serif;
     text-decoration: none;
-    color: black;
+    color: #61004f;
     font-weight: 600;
     font-size: 19px;
     cursor: pointer;
 }
 
 .menu a:hover {
-    color: #f8a5c2;
+    color: #c68bbb;
 }
 
-.hero-btn-container .resume-btn:hover{
+.hero-btn-container .resume-btn1:hover{
     color: white;
 }
 
@@ -97,13 +97,17 @@
 }
 
 .hero-left{
-    margin-left: 130px;
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-bottom: 40px;
     width: 40%;
     position: relative;
 }
 
 .hero-right{
-    margin-right: 200px;
+    margin-bottom: 80px;
+    margin-right: 230px;
+    margin-left: 0px;
     width: 60%;
 }
 
@@ -118,7 +122,7 @@
 .hero-heading{
     font-family: "Mouse Memoirs", serif;
     font-size: 75px;
-    color: #6F1E51;
+    color: #61004f;
 
 }
 
@@ -135,15 +139,17 @@
     gap: 20px;
 }
 
-.resume-btn,
+.resume-btn1,
 .contact-btn{
-    font-family: "Nerko One", serif;
-    font-size: 20px;
+    font-family: "Titan One", serif;
+    font-size: 18px;
     padding: 10px 30px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
 
-.resume-btn{
+.resume-btn1{
     background-color: deeppink;
     color: lightpink;
 }
@@ -256,10 +262,8 @@
 .about-section {
     font-family: "Madimi One", serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    margin-top: 81px;
-    background-image: url('cy_bg.jpg'); 
-    background-color: rgba(66, 62, 62, 0.8);    
-    background-blend-mode: multiply;
+    margin-top: 5px;
+    background-image: url('aboutme2_bg.png'); 
     padding: 3px;
     color: white;
     background-size: cover; 
@@ -277,7 +281,7 @@
 }
 
 .title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -288,7 +292,7 @@
 .subtitle {
     font-family: "Madimi One", serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    font-size: 18px;
+    font-size: 21px;
     margin-top: -10px;
     color: #bbb;
 }
@@ -303,36 +307,32 @@
 .profile-image {
     width: 250px;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .info-text {
-    font-family: "Nerko One", serif;
+    font-family: "Anek Gurmukhi", serif;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 300;
     text-align: left;
     max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.info-text p {
+    font-family: "Anek Gurmukhi", serif;
+    font-weight: 200px;
 }
 
 .heading {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.cta-button {
-    background-color: #ff00ff;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    margin-top: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #cc00cc;
 }
 
 html {
@@ -345,8 +345,8 @@ html {
 .projects-section {
     padding: 3px;
     margin-top: 0px;
-    min-height: 91vh;
-    background-image: url('proj1_bg.png');
+    min-height: 95vh;
+    background-image: url('proj_bg.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -361,7 +361,7 @@ html {
 .section-title {
     font-family: "Titan One", serif;
     font-weight: 120;
-    font-size: 36px;
+    font-size: 38px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     margin-bottom: 10px;
     text-align: center;
@@ -372,7 +372,7 @@ html {
 }
 
 .section-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     font-family: "Madimi One", serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     margin-bottom: 40px;
@@ -392,6 +392,13 @@ html {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .project-card img {
@@ -403,7 +410,7 @@ html {
 .project-card h3 {
     font-family: "Righteous", serif;
     font-weight: 200;
-    color: #2f3542;
+    color: #3b414e;
     margin-top: 10px;
     font-size: 22px;
 }
@@ -420,33 +427,36 @@ html {
     text-align: center;
     padding: 3px;
     margin-top: 0px;
-    min-height: 90vh;
-    background-image: url('contact1_bg.png');
+    margin-bottom: 0px;
+    min-height: 100vh;
+    background-image: url('contactsec_bg.png');
     background-size: cover;
     background-position: center;
 }
+
 
 /* Contact Container */
 .contact-container {
     max-width: 900px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .contact-container h2 {
     font-family: "Jersey 10", serif;
-    font-weight: 400;
+    font-weight: 200px;
     font-style: normal;
-    font-size: 80px;
-    color: #fff;
+    font-size: 88px;
+    color: #ff1493;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
 }
 
 .contact-container p {
     font-family: "Madimi One", serif;
     font-weight: 400;
-    font-size: 18px;
-    color: #fff;
+    font-size: 20px;
+    color: #2f3542;
 }
 
 /* Contact Boxes */
@@ -526,5 +536,78 @@ html {
 }
 
 
+/* Hire Me Container */
+.hireme-section {
+    text-align: center;
+    padding: 3px;
+    margin-top: 0px;
+    min-height: 95vh;
+    background-image: url('hireme_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hireme-container {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinning-image {
+    right: 110px; /* Adjust as needed */
+    top: 50%;
+    width: 160px; /* Adjust size as needed */
+    animation: spin 1s linear infinite; /* Add spinning effect */
+}
 
 
+.spinning-image:hover {
+    animation-play-state: paused;
+}
+
+.hireme-container h2 {
+    margin-top: 200px;
+    font-family: "Rubik Doodle Shadow", serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 80px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.resume-btn2 {
+    font-family: "Titan One", serif;
+    font-weight: 200;
+    background-color: #ff1493;
+    color: white;
+    padding: 12px 24px;
+    margin-top: 80px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.resume-btn2:hover {
+    background-color: #6F1E51;
+}
+
+
+footer {
+    font-family: "Montserrat", serif;
+    text-align: center;
+    padding: 30px;
+    background-color: #d26fa1;
+    color: white;
+    margin-top: 0px;
+}
