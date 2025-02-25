@@ -24,6 +24,8 @@
         background-position: center;
         height: 750px;
         margin: 0;
+        padding: 0;
+        overflow-x: hidden;
     }
 </style>
 
@@ -34,15 +36,16 @@
         <div class="site-title-container">
             <img class="logo" src="new_logo2.png" alt="">
             <p class="site-title">Serilscape.</p>
+            <button class="menu-toggle">&#9776;</button>
          </div>
 
-        <div class="menu">
+        <nav class="menu">
             <a class="homelink" href="#home">Home</a>
             <a class="aboutlink" href="#about">About</a>
             <a class="projectlink" href="#projects">Projects</a>
             <a class="contactlink" href="#contact">Contact</a>
             <a class="hire-me" href="#hire">Hire Me</a>
-        </div>
+        </nav>
     </div>
 
 
@@ -77,33 +80,51 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
+        // Resume Modal Functionality
         const resumeBtns = document.querySelectorAll(".resume-btn1, .resume-btn2");
         const modal = document.getElementById("resumeModal");
         const closeModal = document.querySelector(".close-btn");
 
-        // Show modal when either Resume button is clicked
-        resumeBtns.forEach(button => {
-            button.addEventListener("click", function() {
-                modal.style.display = "flex";
+        if (resumeBtns.length > 0 && modal && closeModal) {
+            resumeBtns.forEach(button => {
+                button.addEventListener("click", function () {
+                    modal.style.display = "flex";
+                });
             });
-        });
 
-        // Hide modal when close button is clicked
-        closeModal.addEventListener("click", function() {
-            modal.style.display = "none";
-        });
-
-        // Hide modal when clicking outside content box
-        window.addEventListener("click", function(event) {
-            if (event.target === modal) {
+            closeModal.addEventListener("click", function () {
                 modal.style.display = "none";
-            }
-        });
-    });
+            });
 
-    document.getElementById("contactBtn").addEventListener("click", function() {
-        document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        } else {
+            console.error("Resume modal elements not found.");
+        }
+
+        // Smooth Scroll to Contact Section
+        const contactBtn = document.getElementById("contactBtn");
+        if (contactBtn) {
+            contactBtn.addEventListener("click", function () {
+                document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+            });
+        }
+
+        // ✅ Fix: Hamburger Menu Toggle
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+
+        if (menuToggle && menu) {
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("show");
+            });
+        } else {
+            console.error("Menu or menu-toggle button not found in the document.");
+        }
     });
 
 </script>
